@@ -5,6 +5,9 @@ const Hero = () => {
     <section className="flex items-start justify-center md:items-center md:justify-start min-h-screen overflow-hidden c-space">
       <HeroText />
       <ParallaxBackground/>
+      <figure className="absolute">
+
+      </figure>
     </section>
   )
 }
