@@ -36,14 +36,20 @@ const HeroText = () => {
             variants={variants}
             initial="hidden"
             animate="visible"
-            transition={{ delay: 1.2 }}
+            transition={{ delay: 1.5 }}
           >
             <FlipWords
               words={words}
               className={"font-black text-white text-8xl"}
             />
           </motion.div>
-          <motion.p className="text-4xl font-medium text-neutral-300">
+          <motion.p
+            className="text-4xl font-medium text-neutral-300"
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 1.8 }}
+          >
             Experiences
           </motion.p>
         </div>
@@ -51,19 +57,44 @@ const HeroText = () => {
 
       {/*Mobile View */}
       <div className="flex flex-col space-y-6 md:hidden">
-        <motion.p className="text-4xl font-medium">Hi, I'm Quayyum</motion.p>
+        <motion.p
+          className="text-4xl font-medium"
+          variants={variants}
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 1 }}
+        >
+          Hi, I'm Quayyum
+        </motion.p>
         <div>
-          <motion.p className="text-5xl font-black text-neutral-300">
+          <motion.p
+            className="text-5xl font-black text-neutral-300"
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 1.2 }}
+          >
             A Software Engineer <br />
             Dedicated to Crafting
           </motion.p>
-          <motion.div>
+          <motion.div
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 1.5 }}
+          >
             <FlipWords
               words={words}
               className={"font-bold text-white text-7xl"}
             />
           </motion.div>
-          <motion.p className="text-4xl font-medium text-neutral-300">
+          <motion.p
+            className="text-4xl font-medium text-neutral-300"
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 1.8 }}
+          >
             Experiences
           </motion.p>
         </div>
