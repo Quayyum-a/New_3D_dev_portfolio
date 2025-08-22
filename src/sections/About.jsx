@@ -1,6 +1,10 @@
+import { useRef } from "react";
 import Card from "../components/Card";
+import { Globe } from "../components/globe";
+import CopyEmailButton from "../components/CopyEmailButton";
 
 const About = () => {
+  const grid2Container = useRef();
   return (
     <section className="c-space section-spacing">
       <h2 className="text-heading">About Me</h2>
@@ -25,36 +29,82 @@ const About = () => {
         </div>
         {/* Grid 2 */}
         <div className="grid-default-color grid-2">
-          <div className="flex items-center justify-center w-full h-full">
+          <div
+            ref={grid2Container}
+            className="flex items-center justify-center w-full h-full"
+          >
             <p className="flex items-end text-5xl text-gray-500">
               SOFTWARE DEVELOPMENT IS A CRAFT
             </p>
             <Card
               style={{ rotate: "75deg", top: "30%", left: "20%" }}
               text="GRASP"
+              containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "-30deg", top: "60%", left: "45%" }}
               text="SOLID"
+              containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "90deg", bottom: "30%", left: "70%" }}
               text="Design Patterns"
+              containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "-45deg", top: "55%", left: "0%" }}
               text="Design Principles"
+              containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "20deg", top: "10%", left: "38%" }}
               text="SRP"
+              containerRef={grid2Container}
+            />
+            <Card
+              style={{ rotate: "30deg", top: "70%", left: "70%" }}
+              image="assets/logos/csharp-pink.png"
+              containerRef={grid2Container}
+            />
+            <Card
+              style={{ rotate: "-45deg", top: "70%", left: "25%" }}
+              image="assets/logos/dotnet-pink.png"
+              containerRef={grid2Container}
+            />
+            <Card
+              style={{ rotate: "-45deg", top: "5%", left: "10%" }}
+              image="assets/logos/java-pink.png"
+              containerRef={grid2Container}
+            />
+            <Card
+              style={{ rotate: "25deg", top: "5%", left: "80%" }}
+              image="assets/logos/javascript-pink.png"
+              containerRef={grid2Container}
+            />
+            <Card
+              style={{ rotate: "55deg", top: "28%", left: "70%" }}
+              image="assets/logos/node-js-pink.png"
+              containerRef={grid2Container}
             />
           </div>
         </div>
         {/* Grid 3 */}
-        <div className="grid-black-color grid-3"></div>
+        <div className="grid-black-color grid-3">
+          <div className="z-10 w-[50%]">
+            <p className="headtext">Time Zone</p>
+            <p className="subtext">I'm based in Nigeria, and open to remote work worldwide</p>
+          </div>
+          <figure className="absolute left-[30%] top-[10%]">
+          <Globe/>
+          </figure>
+        </div>
         {/* Grid 4 */}
-        <div className="grid-special-color grid-4"></div>
+        <div className="grid-special-color grid-4">
+          <div className="flex flex-col items-center justify-center gap-4 size-full">
+            <p className="text-center headtext">Do you want to start a project together?</p>
+            <CopyEmailButton />
+          </div>
+        </div>
         {/* Grid 5 */}
         <div className="grid-default-color grid-5"></div>
       </div>
