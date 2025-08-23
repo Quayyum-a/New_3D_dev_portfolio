@@ -2,6 +2,7 @@ import { useRef } from "react";
 import Card from "../components/Card";
 import { Globe } from "../components/globe";
 import CopyEmailButton from "../components/CopyEmailButton";
+import {Frameworks} from "../components/Frameworks";
 
 const About = () => {
   const grid2Container = useRef();
@@ -106,7 +107,15 @@ const About = () => {
         </div>
         {/* Grid 5 */}
         <div className="grid-default-color grid-5">
-          
+          <div className="z-10 w-[58%]">
+            <p className="headtext">Tech Stack</p>
+            <p className="subtext">
+              I'm proficient in a wide range of languages, frameworks, and tools that enable me to craft robust, scalable, and efficient applications. From web development with React, Next.js, and Tailwind CSS, to backend development with Node.js, Express, and MongoDB, I'm always looking to expand my skillset and stay up-to-date with the latest technologies.
+            </p>
+          </div>
+          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
+            <Frameworks />
+          </div>
         </div>
       </div>
     </section>
